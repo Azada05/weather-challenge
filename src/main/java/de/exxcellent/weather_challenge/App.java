@@ -11,11 +11,15 @@ public class App {
      */
     
     public static void main(String args[]) {
+        //get the day with the least temperature spread
+        ProcessWeather weather = new ProcessWeather();
+        String dayWithSmallestTempSpread =  weather.ProcessWeather();
         
-        String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
+        //get the team name with the least goal spread
+        ProcessFootball football = new ProcessFootball();
+        String teamWithSmallestGoalSpread =  football.ProcessFootball();
+        
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
-
-        String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
         System.out.printf("Team with smallest goal spread       : %s%n", teamWithSmallestGoalSpread);
     }
 }
