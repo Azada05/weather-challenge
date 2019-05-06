@@ -8,14 +8,14 @@ import java.lang.Math;
  */
 public class Team
 {
-    // Deklaration der Variablen
+    // declare the properties of team class
     private String teamName;
     private int goals;
     private int goalsAllowed;
 
     public Team(String teamName, int goals, int goalsAllowed)
     {
-        // Instanzvariable initialisieren
+        // initialize the variables
         super();
         this.teamName = teamName; 
         this.goals = goals;
