@@ -5,14 +5,14 @@
 public class Day
 {
     // Declare variables
-    private int dayId;
+    private String dayId;
     private int mxT;
     private int mnT;
 
     /**
      * Constructor for Objects Class Day
      */
-    public Day(int dayId, int mxT, int mnT) {
+    public Day(String dayId, int mxT, int mnT) {
         // initialize the variables
         super();
         this.dayId = dayId;
@@ -20,7 +20,7 @@ public class Day
         this.mnT = mnT;
     }
     
-    public int getDayId() { 
+    public String getDayId() { 
         return dayId;
     }
     public int getMxT() {

@@ -9,7 +9,7 @@ public class DataReader
 {
     private static final String DELIMITER = ",";
     private static List<String []> dataList = new ArrayList<String[]>();
-    public static void readData(String file)
+    public static List<String[]> readData(String file)
     {
         BufferedReader br = null;
         try{
@@ -23,7 +23,7 @@ public class DataReader
                   if (dataDetails.length > 0) {
                         dataList.add(dataDetails);
                     }
-                }
+            }
         }
         catch (Exception ee)
         {
@@ -41,9 +41,7 @@ public class DataReader
                 ie.printStackTrace();
             }
         }
-    }
-    public List<String []> getDataArray(){
-        return dataList;
+    return dataList;
     }
 }
 

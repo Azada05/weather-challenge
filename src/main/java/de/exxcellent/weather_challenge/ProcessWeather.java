@@ -21,7 +21,8 @@ public class ProcessWeather
         dayWithSmallestTempSpread = "";
         List<Day> dayList = new ArrayList<Day>();
         DataReader data = new DataReader();
-        List<String[]> weatherDetails = data.getDataArray(); // get data from data reader
+        List<String[]> weatherDetails = data.readData("input/weather.csv"); // get data from data reader
+        System.out.println("This is dayList" + dayList);   
         //create Day objects and store in a list
         for ( String []  weatherDetail : weatherDetails) {
             Day day = new Day(weatherDetail[0],
@@ -40,8 +41,8 @@ public class ProcessWeather
                dayWithSmallestTempSpread = d.getDayId();
            }
         }
-     System.out.println("This is dayWithSmallestTempSpread" + dayWithSmallestTempSpread);   
-     return dayWithSmallestTempSpread;
+        System.out.println("This is dayWithSmallestTempSpread" + dayWithSmallestTempSpread);   
+        return dayWithSmallestTempSpread;
     }
     public int getTempDiff(int Mxt, int MnT) {
         return Mxt - MnT;    
