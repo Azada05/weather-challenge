@@ -1,10 +1,10 @@
-/** Class Day initialized object Day with properties: DayId, Maximum Temperature and Minimu Temperature
+/** Class Day initialized object Day with properties: DayId, Maximum Temperature and Minimum Temperature
  * 
  */
 
 public class Day
 {
-    // Declare variables
+    // Declare variables/properties of day object
     private String dayId;
     private int mxT;
     private int mnT;
