@@ -30,21 +30,15 @@ public class ProcessWeather
             dayList.add(day);
         }
         for (Day d : dayList) {
-            int mxT = d.getMxT();
-            int mnT = d.getMnT();
-            tempDiff = getTempDiff(mxT, mnT);
+            tempDiff = d.getMxT() - d.getMnT();
             if (minTempDiff == 0) {
                 minTempDiff = tempDiff;
            }
            if (tempDiff < minTempDiff){
-               tempDiff = minTempDiff;
+               minTempDiff = tempDiff;
                dayWithSmallestTempSpread = d.getDayId();
            }
         }
-        System.out.println("This is dayWithSmallestTempSpread" + dayWithSmallestTempSpread);   
         return dayWithSmallestTempSpread;
-    }
-    public int getTempDiff(int Mxt, int MnT) {
-        return Mxt - MnT;    
     }
 }
