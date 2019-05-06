@@ -19,7 +19,7 @@ public class ProcessWeather
         tempDiff = 0;
         minTempDiff = 0;
         dayWithSmallestTempSpread = "";
-        //initializea a list to hold day objects
+        //initialize a list to hold day objects
         List<Day> dayList = new ArrayList<Day>();
         //get the data from the datareader class
         DataReader data = new DataReader();
@@ -33,7 +33,7 @@ public class ProcessWeather
         //for each day object calculate the temperature difference and update the minimum temperature difference if its bigger than the current temeperature difference
         for (Day d : dayList) {
             tempDiff = d.getMxT() - d.getMnT();
-            //assign the virdt temperature difference
+            //assign the first temperature difference
             if (minTempDiff == 0) {
                 minTempDiff = tempDiff;
            }
